@@ -21,12 +21,18 @@ model = open(file_path,'rb')
 preprocessing_pipeline = pickle.load(model)
 model.close()
 
+class Streamlit_test(APIView):
+    def post(self, request):
+        data=request.data
+        return Response(data, status=status.HTTP_200_OK)
+
 
 class AttritionPrediction(APIView):
     def post(self, request):
         # Check if request data is a list
         if isinstance(request.data, list):
             serialized_list = []
+            print(request.data)
             for data in request.data:
                 # Serialize each data item
                 serialized = EmployeeSerializer(data=data)

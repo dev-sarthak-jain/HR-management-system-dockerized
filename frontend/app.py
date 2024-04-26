@@ -6,7 +6,8 @@ import json
 # Function to send JSON to API and get predictions
 def send_json(data, url="http://127.0.0.1:8000/api/attrition_prediction/"):
     headers = {'Content-Type': 'application/json'}
-    response = requests.post(url, data=json.dumps(data), headers=headers)
+    response = requests.post(url, data, headers=headers)
+    print(response)
     return response.json()
 
 def app():
@@ -24,7 +25,6 @@ def app():
             json_data = row.to_json()
             result = send_json(json_data)
             results.append(result)
-        
         # Display results
         for result in results:
             st.json(result)
