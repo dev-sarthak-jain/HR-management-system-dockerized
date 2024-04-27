@@ -8,12 +8,7 @@ to run the backend
 cd backend
 
 python manage.py migrate
-python manage.py runserver
 
-to run the backend
-cd backend
-
-python manage.py migrate
 python manage.py runserver
 
 to run the frontend
