@@ -1,6 +1,9 @@
 from django.db import models
+import uuid
 
 class Employee(models.Model):
+    Employee_id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    Attrition = models.CharField(max_length=3, default='No', help_text="Attrition status: 'Yes' or 'No'")
     Age = models.IntegerField()
     BusinessTravel = models.CharField(max_length=50)
     DailyRate = models.IntegerField()
@@ -35,3 +38,9 @@ class Employee(models.Model):
     YearsInCurrentRole = models.IntegerField()
     YearsSinceLastPromotion = models.IntegerField()
     YearsWithCurrManager = models.IntegerField()
+    Name = models.CharField(max_length=100)
+
+class Employee_Data(models.Model):
+    Employee_id = models.ForeignKey(Employee, on_delete=models.CASCADE, verbose_name="Employee")
+    Attrition_prediction = models.BooleanField(default=False)
+    #appraisal_suggestion = models.FloatField()
