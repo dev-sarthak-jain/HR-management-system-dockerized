@@ -18,7 +18,15 @@ attrition_model = pickle.load(model)
 model.close()
 file_path = os.path.join(os.path.dirname(__file__), 'AI_models', 'attrition_model', 'preprocessing_pipeline_attrition.pkl')
 model = open(file_path,'rb')
-preprocessing_pipeline = pickle.load(model)
+preprocessing_pipeline_attrition = pickle.load(model)
+model.close()
+file_path = os.path.join(os.path.dirname(__file__), 'AI_models', 'prediction_model', 'appraisal_prediction_model.pkl')
+model = open(file_path,'rb')
+appraisal_model = pickle.load(model)
+model.close()
+file_path = os.path.join(os.path.dirname(__file__), 'AI_models', 'prediction_model', 'preprocessing_pipeline_appraisal.pkl')
+model = open(file_path,'rb')
+preprocessing_pipeline_appraisal = pickle.load(model)
 model.close()
 
 class Streamlit_test(APIView):
@@ -27,10 +35,42 @@ class Streamlit_test(APIView):
         return Response(data, status=status.HTTP_200_OK)
 
 def AttritionPredictionFunction(data):
-    input_transformed = preprocessing_pipeline.transform(data)
+    input_data = pd.DataFrame([data])
+    input_transformed = preprocessing_pipeline_attrition.transform(input_data)
     output = attrition_model.predict(input_transformed)
-    return {"Attrition_prediction":output[0]}
+    return output[0]
 
+def AppraisalPredictionFunction(data):
+    input_data = pd.DataFrame([data])
+    input_transformed = preprocessing_pipeline_appraisal.transform(input_data)
+    output = appraisal_model.predict(input_transformed)
+    return output[0]
+
+
+class EmployeeCreateAPIView(generics.GenericAPIView):
+    def post(self, request):
+        Employee_data = EmployeeSerializer(data=request.data, many ='True')
+        if Employee_data.is_valid():
+            Employee_data.save()
+            data = Employee_data.data
+            for i in data:
+                dict = {
+                "Employee_id":i["Employee_id"],
+                "Attrition_prediction" : AttritionPredictionFunction(i),
+                "Appraisal_suggestion" : AppraisalPredictionFunction(i)
+                }
+                new_data = EmployeeDataSerializer(data=dict)
+                if new_data.is_valid():
+                    new_data.save()
+                else:
+                    print(new_data.data)
+                    print("invalid")
+            return Response("Saved", status=status.HTTP_201_CREATED)
+        else:
+            return Response("Not Saved", status=status.HTTP_400_BAD_REQUEST)
+        
+
+'''
 class AttritionPrediction(APIView):
     def post(self, request):
         if isinstance(request.data, list):
@@ -72,25 +112,4 @@ class AttritionPrediction(APIView):
                 return Response(result, status=status.HTTP_200_OK)
             else:
                 return Response(serialized.errors, status=status.HTTP_400_BAD_REQUEST)
-
-
-class EmployeeCreateAPIView(generics.GenericAPIView):
-    def post(self, request):
-        Employee_data = EmployeeSerializer(data=request.data, many ='True')
-        if Employee_data.is_valid():
-            Employee_data.save()
-            data = Employee_data.data
-            for i in data:
-                emp_id = i['Employee_id']
-                del i['Attrition']
-                del i['Employee_id']
-                del i['Name']
-                input_data = pd.DataFrame([i])
-                new_data = AttritionPredictionFunction(input_data)
-                new_data['Employee_id'] = emp_id
-                new_data = EmployeeDataSerializer(data=new_data)
-                if new_data.is_valid():
-                    new_data.save()
-            return Response("Saved", status=status.HTTP_201_CREATED)
-        else:
-            return Response("Not Saved", status=status.HTTP_400_BAD_REQUEST)
+'''

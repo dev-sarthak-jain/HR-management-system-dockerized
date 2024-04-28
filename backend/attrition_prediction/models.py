@@ -43,4 +43,4 @@ class Employee(models.Model):
 class Employee_Data(models.Model):
     Employee_id = models.ForeignKey(Employee, on_delete=models.CASCADE, verbose_name="Employee")
     Attrition_prediction = models.BooleanField(default=False)
-    #appraisal_suggestion = models.FloatField()
+    Appraisal_suggestion = models.FloatField()
