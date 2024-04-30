@@ -21,5 +21,6 @@ from rest_framework import permissions
 
 urlpatterns = [
     path("admin/", admin.site.urls),
+    path("api/", include("user.urls")),
     path("api/", include("attrition_prediction.urls")),
 ]
