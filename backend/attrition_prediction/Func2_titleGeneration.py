@@ -14,7 +14,7 @@ def initialize_openai_model():
 def generate_chat_title(question):
     model = initialize_openai_model()
 
-    prompt_text = f"Given the question: '{question}', generate a concise, engaging chat title of 5-6 words."
+    prompt_text = f"Given the question: '{question}', generate a concise, chat title of 5-6 words."
 
     prompt = ChatPromptTemplate(
         messages=[
@@ -35,10 +35,7 @@ def generate_chat_title(question):
         return "Error: Unable to generate chat title"
 
 
-
-'''
 if __name__ == "__main__":
     initial_question = "how many people are working in the organization right now?"
     chat_title = generate_chat_title(initial_question)
     print(f"Generated Chat Title: {chat_title}")
-'''

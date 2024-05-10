@@ -157,7 +157,7 @@ class CreateMessages(APIView):
         ######ai_response = llm_response(user_response)
 
 
-        ai_response = generate_response(user_input=user_response, past_convo=message_data)
+        ai_response = generate_response(question=user_response)
         # print(f"fther {user} {ai_response}")
         print(ai_response)
         chat_message = ChatMessage.objects.create(

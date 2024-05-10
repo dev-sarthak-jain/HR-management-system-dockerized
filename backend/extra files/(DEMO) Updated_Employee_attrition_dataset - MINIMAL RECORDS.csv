@@ -1,0 +1,24 @@
+Age,Attrition,BusinessTravel,DailyRate,Department,DistanceFromHome,Education,EducationField,EmployeeCount,EmployeeNumber,EnvironmentSatisfaction,Gender,HourlyRate,JobInvolvement,JobLevel,JobRole,JobSatisfaction,MaritalStatus,MonthlyIncome,MonthlyRate,NumCompaniesWorked,Over18,OverTime,PercentSalaryHike,PerformanceRating,RelationshipSatisfaction,StandardHours,StockOptionLevel,TotalWorkingYears,TrainingTimesLastYear,WorkLifeBalance,YearsAtCompany,YearsInCurrentRole,YearsSinceLastPromotion,YearsWithCurrManager,Name
+45,No,Travel_Rarely,538,Research & Development,1,4,Technical Degree,1,1553,1,Male,66,3,3,Healthcare Representative,2,Divorced,7441,20933,1,Y,No,12,3,1,80,3,10,4,3,10,8,7,7,Arjun Gupta
+35,No,Travel_Rarely,1402,Sales,28,4,Life Sciences,1,1554,2,Female,98,2,1,Sales Representative,3,Married,2430,26204,0,Y,No,23,4,1,80,2,6,5,3,5,3,4,2,Gautam Chatterjee
+32,No,Travel_Rarely,824,Research & Development,5,2,Life Sciences,1,1555,4,Female,67,2,2,Research Scientist,2,Married,5878,15624,3,Y,No,12,3,1,80,1,12,2,3,7,1,2,5,Aditi Mehta
+36,No,Travel_Rarely,1157,Sales,2,4,Life Sciences,1,1556,3,Male,70,3,1,Sales Representative,4,Single,2644,17001,3,Y,Yes,21,4,4,80,0,7,3,2,3,2,1,2,Kavya Dutta
+48,No,Travel_Rarely,492,Sales,16,4,Life Sciences,1,1557,3,Female,96,3,2,Sales Executive,3,Divorced,6439,13693,8,Y,No,14,3,3,80,1,18,2,3,8,7,7,7,Aditi Joshi
+29,No,Travel_Rarely,598,Research & Development,9,3,Life Sciences,1,1558,3,Male,91,4,1,Research Scientist,3,Married,2451,22376,6,Y,No,18,3,1,80,2,5,2,2,1,0,0,0,Vivek Patel
+33,No,Travel_Rarely,1242,Sales,8,4,Life Sciences,1,1560,1,Male,46,3,2,Sales Executive,1,Married,6392,10589,2,Y,No,13,3,4,80,1,8,6,1,2,2,2,2,Ananya Shah
+30,Yes,Travel_Rarely,740,Sales,1,3,Life Sciences,1,1562,2,Male,64,2,2,Sales Executive,1,Married,9714,5323,1,Y,No,11,3,4,80,1,10,4,3,10,8,6,7,Aditi Sharma
+38,No,Travel_Frequently,888,Human Resources,10,4,Human Resources,1,1563,3,Male,71,3,2,Human Resources,3,Married,6077,14814,3,Y,No,11,3,3,80,0,10,2,3,6,3,1,2,Vivek Nair
+35,No,Travel_Rarely,992,Research & Development,1,3,Medical,1,1564,4,Male,68,2,1,Laboratory Technician,1,Single,2450,21731,1,Y,No,19,3,2,80,0,3,3,3,3,0,1,2,Tanvi Nair
+30,No,Travel_Rarely,1288,Sales,29,4,Technical Degree,1,1568,3,Male,33,3,3,Sales Executive,2,Married,9250,17799,3,Y,No,12,3,2,80,1,9,3,3,4,2,1,3,Priya Patel
+35,Yes,Travel_Rarely,104,Research & Development,2,3,Life Sciences,1,1569,1,Female,69,3,1,Laboratory Technician,1,Divorced,2074,26619,1,Y,Yes,12,3,4,80,1,1,2,3,1,0,0,0,Kavya Dutta
+53,Yes,Travel_Rarely,607,Research & Development,2,5,Technical Degree,1,1572,3,Female,78,2,3,Manufacturing Director,4,Married,10169,14618,0,Y,No,16,3,2,80,1,34,4,3,33,7,1,9,Vivek Nair
+38,Yes,Travel_Rarely,903,Research & Development,2,3,Medical,1,1573,3,Male,81,3,2,Manufacturing Director,2,Married,4855,7653,4,Y,No,11,3,1,80,2,7,2,3,5,2,1,4,Aditi Chatterjee
+32,No,Non-Travel,1200,Research & Development,1,4,Technical Degree,1,1574,4,Male,62,3,2,Research Scientist,1,Married,4087,25174,4,Y,No,14,3,2,80,1,9,3,2,6,5,1,2,Deepika Dutta
+48,No,Travel_Rarely,1108,Research & Development,15,4,Other,1,1576,3,Female,65,3,1,Research Scientist,1,Married,2367,16530,8,Y,No,12,3,4,80,1,10,3,2,8,2,7,6,Aditi Kumar
+34,No,Travel_Rarely,479,Research & Development,7,4,Medical,1,1577,1,Male,35,3,1,Research Scientist,4,Single,2972,22061,1,Y,No,13,3,3,80,0,1,4,1,1,0,0,0,Neha Nair
+55,No,Travel_Rarely,685,Sales,26,5,Marketing,1,1578,3,Male,60,2,5,Manager,4,Married,19586,23037,1,Y,No,21,4,3,80,1,36,3,3,36,6,2,13,Saanvi Patel
+34,No,Travel_Rarely,1351,Research & Development,1,4,Life Sciences,1,1580,2,Male,45,3,2,Research Scientist,4,Married,5484,13008,9,Y,No,17,3,2,80,1,9,3,2,2,2,2,1,Arjun Dutta
+26,No,Travel_Rarely,474,Research & Development,3,3,Life Sciences,1,1581,1,Female,89,3,1,Research Scientist,4,Married,2061,11133,1,Y,No,21,4,1,80,0,1,5,3,1,0,0,0,Rahul Patel
+38,No,Travel_Rarely,1245,Sales,14,3,Life Sciences,1,1582,3,Male,80,3,2,Sales Executive,2,Married,9924,12355,0,Y,No,11,3,4,80,1,10,3,3,9,8,7,7,Ananya Rao
+38,No,Travel_Rarely,437,Sales,16,3,Life Sciences,1,1583,2,Female,90,3,2,Sales Executive,2,Single,4198,16379,2,Y,No,12,3,2,80,0,8,5,4,3,2,1,2,Gautam Sharma
+36,No,Travel_Rarely,884,Sales,1,4,Life Sciences,1,1585,2,Female,73,3,2,Sales Executive,3,Single,6815,21447,6,Y,No,13,3,1,80,0,15,5,3,1,0,0,0,Kavya Sharma
