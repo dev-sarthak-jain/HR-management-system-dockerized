@@ -7,21 +7,21 @@ const chatData = [
   {
     icon: <FaSearch className="mx-auto" />,
     mainPrompt: "Discover",
-    prompt1: "Tell me about Neural Niti",
-    prompt2: "Tell me more about gun control policies",
+    prompt1: "What are the differnet classes of employee working at our organization",
+    prompt2: "Tell me how can we reduce attrition in our organization",
   },
   {
     icon: <PiPencilSimpleLineThin className="mx-auto" />,
-    mainPrompt: "Generate",
+    mainPrompt: "Ask",
     prompt1:
-      "Generate a policy that protects the rights of international unemployed workers",
-    prompt2: "Generate a policy based on our conversation today",
+      "what is the avergae salary of employees here",
+    prompt2: "Tell me about the employees with age more than 40 and which departments are they working in",
   },
   {
     icon: <BsChatRightDots className="mx-auto" />,
     mainPrompt: "Chats",
-    prompt1: "Here are my concerns, are there existing policies to help me?",
-    prompt2: "Let’s talk policies today!",
+    prompt1: "What is your role",
+    prompt2: "how can you assist me",
   },
 ];
 

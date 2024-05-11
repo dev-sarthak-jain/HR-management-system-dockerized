@@ -27,7 +27,7 @@ const Footer = () => {
     <footer className="bg-[#0A1218] py-8 pl-1 mt-16 flex justify-start sm:justify-center flex-wrap space-y-5 sm:space-y-0">
       <div className="flex-col w-full sm:w-auto ">
       <p className=" mx-1 lg:mx-[53px] text-[#FFFFFF] font-bold text-lg sm:text-xl mb-1">
-          OpenPolitica
+          Neural Niti
         </p>
         <ul className="flex-col items-center lg:mx-12 text-white">
           {footerItems.map((item, index) => (

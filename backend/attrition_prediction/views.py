@@ -51,6 +51,7 @@ def AppraisalPredictionFunction(data):
 class EmployeeCreateAPIView(generics.GenericAPIView):
     def post(self, request):
         Employee_data = EmployeeSerializer(data=request.data, many ='True')
+        print(Employee_Data)
         if Employee_data.is_valid():
             Employee_data.save()
             data = Employee_data.data
@@ -157,7 +158,7 @@ class CreateMessages(APIView):
         ######ai_response = llm_response(user_response)
 
 
-        ai_response = generate_response(question=user_response)
+        ai_response = generate_response(question=user_response, past_convo = message_data)
         # print(f"fther {user} {ai_response}")
         print(ai_response)
         chat_message = ChatMessage.objects.create(

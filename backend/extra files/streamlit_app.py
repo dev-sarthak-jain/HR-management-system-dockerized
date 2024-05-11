@@ -26,7 +26,7 @@ def app():
         df = pd.read_csv(uploaded_file)
         json_data = df.to_dict(orient='records')  # Convert DataFrame to list of dicts
         response = send_json(json_data)
-        if response.status_code == 200:
+        if response.status_code == 201:
             st.success("Data successfully sent to API")
             with bottom_container:
                 st.write(response.text)  # Display the API response

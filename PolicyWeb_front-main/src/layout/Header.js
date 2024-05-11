@@ -21,10 +21,7 @@ const Header = () => {
   };
 
   const menuItems = user ? [
-    { link: "/", title: "Home" },
-    { link: "/chat", title: "Products" },
-    { link: "/dashboard", title: "DashBoard" },
-    { link: "/about", title: "About Us" },
+    //{ link: "/dashboard", title: "DashBoard" },
     { link: "/signup", title: "Sign Up" },
   ] : [
     { link: "/", title: "Home" },
