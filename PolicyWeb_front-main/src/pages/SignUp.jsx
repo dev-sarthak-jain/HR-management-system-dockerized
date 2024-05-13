@@ -29,7 +29,7 @@ const SignUp = () => {
     <div>
     <div className="min-h-screen flex items-center justify-center bg-backgroundColor py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl w-full bg-white p-5 rounded-md">
-        <div className="bg-[#3C6E71] rounded-md p-5">
+        <div className="bg-[#000000] rounded-md p-5">
           <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
             Sign Up
           </h2>

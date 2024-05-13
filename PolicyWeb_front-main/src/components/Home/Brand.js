@@ -48,7 +48,7 @@ const Brand = () => {
             <div className="mb-8 group cursor-pointer transition-transform transform duration-1000 hover:scale-105">
               <Link to={'/chat'}>
               <img
-                src="./assets/img/chatbot-bh.png"
+                src="./assets/img/chatbot-front.png"
                 alt="img"
                 className="w-full h-auto"
               />

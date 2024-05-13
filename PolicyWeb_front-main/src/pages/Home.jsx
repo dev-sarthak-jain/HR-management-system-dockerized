@@ -1,5 +1,5 @@
 import React from "react";
-import { AvatarSlide, FAQs, Promotion, MediaBoard, Brand } from "../components";
+import { AvatarSlide, FAQs, MediaBoard, Brand } from "../components";
 // import TeamInfo from "../components/Home/TeamInfo";
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
     <div>
       <Brand />
       {/* <MediaBoard /> */}
-      <Promotion />
+      {/* <Promotion /> */}
       {/* <AvatarSlide /> */}
       <FAQs />
     </div>

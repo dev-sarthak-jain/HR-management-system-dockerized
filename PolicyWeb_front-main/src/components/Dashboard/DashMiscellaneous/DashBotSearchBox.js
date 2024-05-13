@@ -8,7 +8,7 @@ const DashBotSearchBox = () => {
 
     return (
         <div className='w-[400px]'>
-            <div className='px-3 py-2 bg-[#3C6E71] rounded-[5px]'>
+            <div className='px-3 py-2 bg-[#000000] rounded-[5px]'>
                 <div className='flex items-center pb-2'>
                     <svg className="text-white" width="24" height="24" viewBox="0 0 41 41" fill="none"
                     >

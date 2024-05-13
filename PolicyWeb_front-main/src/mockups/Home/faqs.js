@@ -1,27 +1,27 @@
 const faqs = [
   {
     no: 1,
-    question: "How is user engagement measured?",
+    question: "WHat is the purpose of our produce?",
     answer:
-      "We track user engagement through comments, ratings, and shares, enabling deeper insights into audience interaction with policy content.",
+      "We revolutionalize HR management by automating HR related task and queries.",
   },
   {
     no: 2,
-    question: "What policy categories are available?",
+    question: "What are the current services available?",
     answer:
-      "Our platform offers a wide range of policy categories addressing various societal issues such as education, healthcare, and climate change.",
+      "Currently the newest addition to our feature suit is the attrition prediction",
   },
   {
     no: 3,
-    question: "How can I share my perspective?",
+    question: "How can I add my employee details?",
     answer:
-      "Our platform encourages users to actively participate in policy discussions by providing feedback, engaging in conversations, and sharing perspectives via comments.",
+      "Our platform offers seemless employee onboarding by simpling uploading an excel file",
   },
   {
     no: 4,
-    question: "How do I customize my profile?",
+    question: "How to undertsnt the data?",
     answer:
-      "Visit your user profile section to personalize your experience by selecting preferences, following specific policies or categories, and managing your contributions.",
+      "Our intelligent HR assisstant is onestop solution for all your needs of any sorts .",
   },
 ];
 

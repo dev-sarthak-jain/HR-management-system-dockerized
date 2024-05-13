@@ -17,16 +17,15 @@ const SignIn = () => {
 
           <div className="md:pr-5">
             <p className="mt-5 ml-5 text-base md:text-lg">
-              At OpenPolitica, we seek to bridge the gap between
-              policymakers and the public, leveraging artificial intelligence
-              and data analysis to identify user needs, generate surveys, and
-              assess the impact of policies.
+            At NeuralNiti, we are dedicated to transforming the interaction between human resources
+            departments and employees by leveraging advanced artificial intelligence. Our bot is
+            designed to respond to employee needs effectively, streamline HR processes.
             </p>
           </div>
         </div>
       </div>
       <div>
-        <div className="mb-5 md:mt-9 md:mr-14 bg-[#3C6E71] border-white rounded-lg">
+        <div className="mb-5 md:mt-9 md:mr-14 bg-[#000000] border-white rounded-lg">
           <div>
             <div className="p-8 pt:8 md:pt-16 text-white">
               <h1 className="text-2xl md:text-4xl text-center font-bold mb-2 md:mb-5">

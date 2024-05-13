@@ -44,7 +44,7 @@ const Header = () => {
 
           <Link
             to="/signin"
-            className="my-2 p-2 lg:my-0 order-3 font-nunito text-sm sm:text-lg lg:font-bold lg:bg-[#284B63] sm:p-3 text-white lg:w-28 lg:h-24 justify-center items-center flex lg:absolute lg:right-0.5 rounded-b-lg"
+            className="my-2 p-2 lg:my-0 order-3 font-nunito text-sm sm:text-lg lg:font-bold lg:bg-[#868BC7] sm:p-3 text-white lg:w-28 lg:h-24 justify-center items-center flex lg:absolute lg:right-0.5 rounded-b-lg"
           >
             Sign in
           </Link>
