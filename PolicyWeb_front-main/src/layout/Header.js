@@ -21,14 +21,12 @@ const Header = () => {
   };
 
   const menuItems = user ? [
-    //{ link: "/dashboard", title: "DashBoard" },
+    { link: "/", title: "Home" },
+    { link: "/dashboard", title: "DashBoard" },
     { link: "/signup", title: "Sign Up" },
   ] : [
     { link: "/", title: "Home" },
-    { link: "/chat", title: "Products" },
-    { link: "/about", title: "About Us" },
     { link: "/signup", title: "Sign Up" },
-
   ];
 
   const handleMobileMenuToggle = () => {
