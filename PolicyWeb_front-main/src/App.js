@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { Home, Chat, Products, About, SignIn, SignUp, EachTranscriptPage, PolicyCardByID, EditPolicyCard, CreatePolicyCard, Dashboard } from "./pages";
+import { Home, Chat, Products, About, SignIn, SignUp, EachTranscriptPage, Dashboard } from "./pages";
 import Header from "./layout/Header";
 import { ChatbotIcon } from "./components";
 import PrivateRoute from "./components/PrivateRoute";
@@ -29,17 +29,9 @@ function App() {
                 </PrivateRoute>
               }
             />
-            <Route
-              path="/dashboard/:policyCardID"
-              element={<PolicyCardByID />}
-            />
-            <Route
-              path="/dashboard/edit/:policyCardID"
-              element={<EditPolicyCard />}
-            />
 
 
-            <Route path="/dashboard/new" element={<CreatePolicyCard />} />
+
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
           </Routes>
