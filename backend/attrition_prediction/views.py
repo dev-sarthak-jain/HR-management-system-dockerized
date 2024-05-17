@@ -64,9 +64,6 @@ class EmployeeCreateAPIView(generics.GenericAPIView):
                 new_data = EmployeeDataSerializer(data=dict)
                 if new_data.is_valid():
                     new_data.save()
-                else:
-                    print(new_data.data)
-                    print("invalid")
             return Response("Saved", status=status.HTTP_201_CREATED)
         else:
             return Response("Not Saved", status=status.HTTP_400_BAD_REQUEST)        

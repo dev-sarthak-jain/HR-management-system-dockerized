@@ -93,7 +93,7 @@ const AddComponent = () => {
           />
         </div>
         <div className="text-white font-bold mt-3">Add new user data</div>
-        <div className="mt-2">Simply create your first component</div>
+        <div className="mt-2">Upload .csv .xlsx data</div>
         <div className="mt-1">Just click on the button</div>
         <div
           className="flex items-center p-3 mt-3"
@@ -106,11 +106,12 @@ const AddComponent = () => {
             onChange={handleFileChange}
             onClick={(event) => {
               event.target.value = null;
+              event.target.value = null;
             }}
           />
           <AiOutlineCloudUpload className="w-5 h-5 mr-2" />
           <button onClick={handleClick} onDragOver={handleDragOver} onDrop={handleDrop} onDragLeave={handleDragLeave} style={{ cursor: 'pointer' }}>
-            Add Component
+            Select user data
           </button>
         </div>
         <button className="mt-4 p-2 bg-blue-600 text-white rounded-lg" onClick={handleSubmit} style={{ display: file ? 'block' : 'none' }}>

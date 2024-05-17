@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import clsx from 'https://cdn.skypack.dev/clsx@1.1.1';
 import { useSpring, animated, config } from 'react-spring';
 import MenuItem from './MenuItem';
 import IconButton from './IconButton';
 import Image from './Image';
 import Icon from './Icon';
+import { useSelector } from 'react-redux';
+import { getToken } from '../../store/auth/selectors';
+import { userInfo } from "../../redux/Selectors/selectors"
 import './style.css';
-
-
-
 
 const sidebarItems = [
   [
@@ -25,6 +25,22 @@ const sidebarItems = [
 ];
 
 const Sidebar = ({ onSidebarHide, showSidebar }) => {
+  let userName;
+    const user = useSelector(state => userInfo(state))
+   if(user){
+     userName = user.first_name + " " + user.last_name;
+   }
+    const token = useSelector(getToken) || userName || 'Jane Doe';
+
+    const [username, setUsername] = useState(token);
+
+    const changeUserName = username => {
+        setUsername(token);
+    }
+
+    useEffect(() => {
+        changeUserName(token);
+    }, [token]);
   const [selected, setSelected] = useState('0');
   const { dashOffset, indicatorWidth, precentage } = useSpring({
     dashOffset: 26.015,
@@ -63,7 +79,7 @@ const Sidebar = ({ onSidebarHide, showSidebar }) => {
           >
             <div className="block sm:hidden xl:block pt-3">
               <div className="font-bold text-gray-300 text-sm">Used Space</div>
-              <div className="text-gray-500 text-xs">Admin updated 09:12 am November 08,2020</div>
+              <div className="text-gray-500 text-xs">Admin updated 09:12 am November 08, 2020</div>
               <animated.div className="text-right text-gray-400 text-xs">
                 {precentage.interpolate((i) => `${Math.round(i)}%`)}
               </animated.div>
@@ -82,7 +98,7 @@ const Sidebar = ({ onSidebarHide, showSidebar }) => {
                 </svg>
               </div>
             </div>
-            <div className="hidden sm:block xl:hidden ">
+            <div className="hidden sm:block xl:hidden">
               <svg width="56" height="56" viewBox="0 0 56 56" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="56" height="56" fill="#2C2C2D" />
                 <path
@@ -106,7 +122,7 @@ const Sidebar = ({ onSidebarHide, showSidebar }) => {
       <div className="flex-shrink-0 overflow-hidden p-2">
         <div className="flex items-center h-full sm:justify-center xl:justify-start p-2 sidebar-separator-bottom">
           <Image path="mock_faces_8" className="w-10 h-10" />
-          <div className="block sm:hidden xl:block ml-2 font-bold ">Jerry Wilson</div>
+          <div className="block sm:hidden xl:block ml-2 font-bold ">{username}</div>
           <div className="flex-grow block sm:hidden xl:block" />
           <Icon path="res-react-dash-options" className="block sm:hidden xl:block w-3 h-3" />
         </div>

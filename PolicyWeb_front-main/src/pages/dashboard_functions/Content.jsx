@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ useState, useEffect } from 'react';
 import NameCard from './NameCard';
 import Graph from './Graph';
 import TopCountries from './TopCountries';
@@ -7,6 +7,9 @@ import Satisfaction from './Satisfaction';
 import AddComponent from './AddComponent';
 import Icon from './Icon';
 import IconButton from './IconButton';
+import { useSelector } from 'react-redux';
+import { getToken } from '../../store/auth/selectors';
+import { userInfo } from "../../redux/Selectors/selectors"
 import './style.css';
 
 const employeeData = [
@@ -16,6 +19,22 @@ const employeeData = [
 ];
 
 const Content = ({ onSidebarHide }) => {
+  let userName;
+    const user = useSelector(state => userInfo(state))
+   if(user){
+     userName = user.first_name + " " + user.last_name;
+   }
+    const token = useSelector(getToken) || userName || 'Jane Doe';
+
+    const [username, setUsername] = useState(token);
+
+    const changeUserName = username => {
+        setUsername(token);
+    }
+
+    useEffect(() => {
+        changeUserName(token);
+    }, [token]);
   return (
     <div className="flex w-full">
       <div className="w-full h-screen hidden sm:block sm:w-20 xl:w-60 flex-shrink-0">.</div>
@@ -24,10 +43,10 @@ const Content = ({ onSidebarHide }) => {
           <div className="sm:flex-grow flex justify-between">
             <div className="">
               <div className="flex items-center">
-                <div className="text-3xl font-bold text-white">Hello David</div>
+                <div className="text-3xl font-bold text-white">{username}</div>
                 <div className="flex items-center p-2 bg-card ml-2 rounded-xl">
                   <Icon path="res-react-dash-premium-star" />
-                  <div className="ml-2 font-bold text-premium-yellow">PREMIUM</div>
+                  <div className="ml-2 font-bold text-premium-yellow">Authorized HR personnel</div>
                 </div>
               </div>
               <div className="flex items-center">

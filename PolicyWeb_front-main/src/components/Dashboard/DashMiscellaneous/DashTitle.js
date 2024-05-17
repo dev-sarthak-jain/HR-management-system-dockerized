@@ -6,20 +6,20 @@ import { userInfo } from "../../../redux/Selectors/selectors"
 const DashTitle = () => {
     let userName;
     const user = useSelector(state => userInfo(state))
-   if(user){
-     userName = user.first_name + " " + user.last_name;
-   }
-    const token = useSelector(getToken) || userName || 'Jane Doe';
-
-    const [username, setUsername] = useState(token);
-
-    const changeUserName = username => {
-        setUsername(token);
+    if(user){
+        userName = user.first_name + " " + user.last_name;
     }
+        const token = useSelector(getToken) || userName || 'Jane Doe';
 
-    useEffect(() => {
-        changeUserName(token);
-    }, [token]);
+        const [username, setUsername] = useState(token);
+
+        const changeUserName = username => {
+            setUsername(token);
+        }
+
+        useEffect(() => {
+            changeUserName(token);
+        }, [token]);
 
     return (
         <div>

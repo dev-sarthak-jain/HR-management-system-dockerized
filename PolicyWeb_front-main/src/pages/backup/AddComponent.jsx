@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Papa from 'papaparse';
 import { AiOutlineCloudUpload } from 'react-icons/ai';
-import './style.css'
-
+import './style.css';
 
 const AddComponent = () => {
   const [file, setFile] = useState(null);
@@ -98,6 +97,10 @@ const AddComponent = () => {
         <div
           className="flex items-center p-3 mt-3"
           style={{ background: '#2f49d1', borderRadius: '15px', padding: '8px 16px', justifyContent: 'center', color: 'white' }}
+          onClick={handleClick}
+          onDragOver={handleDragOver}
+          onDrop={handleDrop}
+          onDragLeave={handleDragLeave}
         >
           <input
             type="file"
@@ -109,10 +112,15 @@ const AddComponent = () => {
             }}
           />
           <AiOutlineCloudUpload className="w-5 h-5 mr-2" />
-          <button onClick={handleClick} onDragOver={handleDragOver} onDrop={handleDrop} onDragLeave={handleDragLeave} style={{ cursor: 'pointer' }}>
+          <button style={{ cursor: 'pointer' }}>
             Add Component
           </button>
         </div>
+        {file && (
+          <div className="mt-2 text-white truncate max-w-xs">
+            File selected: {file.name}
+          </div>
+        )}
         <button className="mt-4 p-2 bg-blue-600 text-white rounded-lg" onClick={handleSubmit} style={{ display: file ? 'block' : 'none' }}>
           Submit
         </button>
