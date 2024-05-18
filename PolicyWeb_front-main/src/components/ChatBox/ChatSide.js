@@ -171,7 +171,7 @@ const ChatSide = () => {
 
 
   return (
-    <div className={`${sideBar ? "block" : "hidden"} lg:block w-4/5 md:11/12 lg:w-1/5 h-screen ${!currentMode ? "bg-[#868BC7]" : "bg-[#212530]"} text-white py-2.5 relative`}>
+    <div className={`${sideBar ? "block" : "hidden"} lg:block w-4/5 md:11/12 lg:w-1/5 h-screen ${!currentMode ? "bg-[#868BC7]" : "bg-[#171717]"} text-white py-2.5 relative`}>
     
       <ChatSideTop userHomeUrl={`/chat`} />
       <p className="text-sm m-4">Last 30 days</p>

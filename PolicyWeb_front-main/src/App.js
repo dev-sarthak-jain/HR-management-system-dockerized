@@ -18,11 +18,11 @@ function App() {
               path="/chat/:transcriptID"
               element={<EachTranscriptPage />}
             />
-            <Route path="/" element={<Home />} />
+
             <Route path="/products" element={<Products />} />
             <Route path="/about" element={<About />} />
             <Route
-              path="/dashboard"
+              path="/"
               element={
                 <PrivateRoute>
                   <Dashboard />

@@ -21,8 +21,6 @@ const Header = () => {
   };
 
   const menuItems = user ? [
-    { link: "/", title: "Home" },
-    { link: "/dashboard", title: "DashBoard" },
     { link: "/signup", title: "Sign Up" },
   ] : [
     { link: "/", title: "Home" },
