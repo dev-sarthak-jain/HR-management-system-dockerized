@@ -5,10 +5,12 @@ import os
 from dotenv import load_dotenv
 load_dotenv(override=True)
 
+
+
 def initialize_openai_model():
     # Initialize the OpenAI model with your API key
     # openai_api_key = os.getenv("OPENAI_API_KEY")  # Ensure this matches your .env file
-    openai_api_key = os.getenv("OPENAI_API_KEY")
+    openai_api_key = os.environ.get('OPENAI_API')
     return OpenAI(openai_api_key=openai_api_key)
 
 def generate_chat_title(question):
